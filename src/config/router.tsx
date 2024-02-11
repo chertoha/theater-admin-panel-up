@@ -3,6 +3,7 @@ import AuthProvider from "components/AuthProvider";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 
 const PublicationsPage = lazy(() => import("../pages/PublicationsPage"));
+const LoginPage = lazy(() => import("../pages/LoginPage"));
 
 export const ROUTES = {
   ROOT: "/",
@@ -13,7 +14,7 @@ export const ROUTES = {
 const routes = [
   {
     path: ROUTES.LOGIN,
-    element: <div>Login</div>,
+    element: <LoginPage />,
   },
   {
     path: ROUTES.ROOT,
