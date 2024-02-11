@@ -1,5 +1,7 @@
+import Publications from "components/Publications";
+
 const PublicationsPage = () => {
-  return <div>PublicationsPage </div>;
+  return <Publications />;
 };
 
 export default PublicationsPage;

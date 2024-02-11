@@ -14,15 +14,15 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    <ThemeProvider theme={theme}>
-      <HelmetProvider>
-        <CssBaseline />
-        {globalStyles}
-        <App />
-      </HelmetProvider>
-    </ThemeProvider>
-    {/* </Provider> */}
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <HelmetProvider>
+          <CssBaseline />
+          {globalStyles}
+          <App />
+        </HelmetProvider>
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 
