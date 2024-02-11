@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import AuthProvider from "components/AuthProvider";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
+import SharedLayout from "components/SharedLayout";
 
 const PublicationsPage = lazy(() => import("../pages/PublicationsPage"));
 const LoginPage = lazy(() => import("../pages/LoginPage"));
@@ -20,9 +21,7 @@ const routes = [
     path: ROUTES.ROOT,
     element: (
       <AuthProvider>
-        <div>
-          Shared Layout <Outlet />
-        </div>
+        <SharedLayout />
       </AuthProvider>
     ),
     children: [
