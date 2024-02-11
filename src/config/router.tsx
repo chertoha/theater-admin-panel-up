@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import AuthProvider from "components/AuthProvider";
-import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import SharedLayout from "components/SharedLayout";
 
 const PublicationsPage = lazy(() => import("../pages/PublicationsPage"));
