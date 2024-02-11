@@ -1,31 +1,38 @@
 // import { lazy } from "react";
+import AuthProvider from "components/AuthProvider";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 
 // const HomePage = lazy(() => import("./pages/HomePage"));
 
 export const ROUTES = {
   ROOT: "/",
-  PUBLICATIONS: "/publications",
-  LOGIN: "/login",
+  PUBLICATIONS: "publications",
+  LOGIN: "login",
 };
 
 const routes = [
   {
+    path: ROUTES.LOGIN,
+    element: <div>Login</div>,
+  },
+  {
     path: ROUTES.ROOT,
     element: (
-      <div>
-        Shared Layout <Outlet />
-      </div>
+      <AuthProvider>
+        <div>
+          Shared Layout <Outlet />
+        </div>
+      </AuthProvider>
     ),
     children: [
       {
         index: true,
         element: <Navigate to={ROUTES.PUBLICATIONS} />,
       },
-      {
-        path: ROUTES.LOGIN,
-        element: <div>Login</div>,
-      },
+      //   {
+      //     path: ROUTES.LOGIN,
+      //     element: <div>Login</div>,
+      //   },
       {
         path: ROUTES.PUBLICATIONS,
         element: <div>Publications</div>,
