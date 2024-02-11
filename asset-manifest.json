@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/theater-admin-panel-up/static/js/main.10a27a7e.js",
+    "static/js/828.fe34896d.chunk.js": "/theater-admin-panel-up/static/js/828.fe34896d.chunk.js",
+    "static/js/160.d28082cb.chunk.js": "/theater-admin-panel-up/static/js/160.d28082cb.chunk.js",
+    "static/js/592.f7392eb1.chunk.js": "/theater-admin-panel-up/static/js/592.f7392eb1.chunk.js",
+    "static/js/140.c154467f.chunk.js": "/theater-admin-panel-up/static/js/140.c154467f.chunk.js",
+    "index.html": "/theater-admin-panel-up/index.html",
+    "main.10a27a7e.js.map": "/theater-admin-panel-up/static/js/main.10a27a7e.js.map",
+    "828.fe34896d.chunk.js.map": "/theater-admin-panel-up/static/js/828.fe34896d.chunk.js.map",
+    "160.d28082cb.chunk.js.map": "/theater-admin-panel-up/static/js/160.d28082cb.chunk.js.map",
+    "592.f7392eb1.chunk.js.map": "/theater-admin-panel-up/static/js/592.f7392eb1.chunk.js.map",
+    "140.c154467f.chunk.js.map": "/theater-admin-panel-up/static/js/140.c154467f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.10a27a7e.js"
+  ]
+}
