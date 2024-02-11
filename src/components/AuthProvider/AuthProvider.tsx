@@ -1,5 +1,5 @@
 import { ROUTES } from "config/router";
-import React, { FC, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { Navigate } from "react-router-dom";
 
 interface IAuthProviderProps {
@@ -8,7 +8,7 @@ interface IAuthProviderProps {
 
 const AuthProvider: FC<IAuthProviderProps> = ({ children }) => {
   const auth = true;
-  //   const auth = false;
+  // const auth = false;
 
   return auth ? (
     <>{children}</>

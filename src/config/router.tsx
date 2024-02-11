@@ -1,13 +1,13 @@
-// import { lazy } from "react";
+import { lazy } from "react";
 import AuthProvider from "components/AuthProvider";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 
-// const HomePage = lazy(() => import("./pages/HomePage"));
+const PublicationsPage = lazy(() => import("../pages/PublicationsPage"));
 
 export const ROUTES = {
   ROOT: "/",
   PUBLICATIONS: "publications",
-  LOGIN: "login",
+  LOGIN: "/login",
 };
 
 const routes = [
@@ -35,7 +35,7 @@ const routes = [
       //   },
       {
         path: ROUTES.PUBLICATIONS,
-        element: <div>Publications</div>,
+        element: <PublicationsPage />,
       },
       {
         path: "*",
