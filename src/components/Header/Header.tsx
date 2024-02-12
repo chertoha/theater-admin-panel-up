@@ -1,8 +1,8 @@
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
-import Badge from "@mui/material/Badge";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+// import Badge from "@mui/material/Badge";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import { FC } from "react";
@@ -69,14 +69,15 @@ const Header: FC<IHeaderProps> = ({ open, toggleDrawer }) => {
         >
           Dashboard
         </Typography>
-        <IconButton color="inherit">
+
+        {/* <IconButton color="inherit">
           <Badge
             badgeContent={4}
             color="secondary"
           >
             <NotificationsIcon />
           </Badge>
-        </IconButton>
+        </IconButton> */}
       </Toolbar>
     </AppBar>
   );
