@@ -28,6 +28,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import { ROUTES } from "config/router";
 import { drawerWidth } from "config/constants";
 import Header from "components/Header";
+import { blue } from "@mui/material/colors";
 
 // interface AppBarProps extends MuiAppBarProps {
 //   open?: boolean;
@@ -69,11 +70,32 @@ const Drawer = styled(MuiDrawer, {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      width: theme.spacing(7),
+      width: theme.spacing(28),
       [theme.breakpoints.up("sm")]: {
-        width: theme.spacing(9),
+        width: theme.spacing(36),
       },
     }),
+  },
+}));
+
+// const StyledLink = styled(NavLink, {shouldForwardProp: true})({theme})=>({
+//   "&.active": {
+//     // color: theme.
+
+//   }
+// });
+
+const StyledLink = styled(NavLink)(({ theme }) => ({
+  // backgroundColor: "black",
+  display: "block",
+  textDecoration: "none",
+  color: "black",
+
+  "&.active": {
+    backgroundColor: blue[500],
+    color: "white",
+
+    "& .MuiSvgIcon-root": { fill: "white" },
   },
 }));
 
@@ -141,7 +163,7 @@ const SharedLayout = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              px: [1],
+              px: [4],
               pl: [10],
             }}
           >
@@ -154,51 +176,44 @@ const SharedLayout = () => {
 
           <Divider />
           <List component="nav">
-            <ListItemButton>
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
-              <NavLink to="/publications">
+            <StyledLink to="/publications">
+              <ListItemButton>
+                <ListItemIcon>
+                  <DashboardIcon />
+                </ListItemIcon>
                 <ListItemText primary="Публікації" />
-              </NavLink>
-            </ListItemButton>
+              </ListItemButton>
+            </StyledLink>
 
-            <ListItemButton>
-              <ListItemIcon>
-                <PeopleIcon />
-              </ListItemIcon>
-              <NavLink to={ROUTES.USERS}>
+            <StyledLink to={ROUTES.USERS}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <PeopleIcon />
+                </ListItemIcon>
                 <ListItemText primary="Користувачі" />
-              </NavLink>
-            </ListItemButton>
+              </ListItemButton>
+            </StyledLink>
 
-            <ListItemButton>
-              <ListItemIcon>
-                <MarkunreadIcon />
-              </ListItemIcon>
-              <NavLink to={ROUTES.SUBSCRIBERS}>
+            <StyledLink to={ROUTES.SUBSCRIBERS}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MarkunreadIcon />
+                </ListItemIcon>
                 <ListItemText primary="Підписники" />
-              </NavLink>
-            </ListItemButton>
+              </ListItemButton>
+            </StyledLink>
 
-            <ListItemButton>
-              <ListItemIcon>
-                <InfoIcon />
-              </ListItemIcon>
+            <StyledLink to={ROUTES.ABOUT}>
+              <ListItemButton>
+                <ListItemIcon>
+                  <InfoIcon />
+                </ListItemIcon>
 
-              <NavLink to={ROUTES.ABOUT}>
                 <ListItemText primary="Про нас" />
-              </NavLink>
-            </ListItemButton>
+              </ListItemButton>
+            </StyledLink>
 
-            {/* <ListItemButton>
-              <ListItemIcon>
-                <LayersIcon />
-              </ListItemIcon>
-              <ListItemText primary="Integrations" />
-            </ListItemButton> */}
-
-            <Divider sx={{ my: 1 }} />
+            <Divider sx={{ my: 4 }} />
 
             {/* <ListSubheader
               component="div"
@@ -245,11 +260,11 @@ const SharedLayout = () => {
 
           <Container
             maxWidth="lg"
-            sx={{ mt: 4, mb: 4 }}
+            sx={{ mt: 16, mb: 16 }}
           >
             <Grid
               container
-              spacing={3}
+              spacing={12}
             >
               {/* <Grid
                 item

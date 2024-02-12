@@ -44,6 +44,7 @@ const Header: FC<IHeaderProps> = ({ open, toggleDrawer }) => {
     >
       <Toolbar
         sx={{
+          px: [12],
           pr: "24px", // keep right padding when drawer closed
         }}
       >
