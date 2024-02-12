@@ -19,13 +19,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ListItemText from "@mui/material/ListItemText";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import LayersIcon from "@mui/icons-material/Layers";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import ListSubheader from "@mui/material/ListSubheader";
 import { Outlet } from "react-router-dom";
+// import LogoIcon from "assets/images/icons/logo.svg";
+import { ReactComponent as LogoIcon } from "assets/images/icons/logo.svg";
+import MarkunreadIcon from "@mui/icons-material/Markunread";
+import InfoIcon from "@mui/icons-material/Info";
 
 interface ISharedLayoutProps {
   //...
@@ -138,73 +139,84 @@ const SharedLayout: FC<ISharedLayoutProps> = () => {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "flex-end",
+              justifyContent: "space-between",
               px: [1],
+              pl: [10],
             }}
           >
+            <LogoIcon width="100" />
+
             <IconButton onClick={toggleDrawer}>
               <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
+
           <Divider />
           <List component="nav">
             <ListItemButton>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" />
+              <ListItemText primary="Публікації" />
             </ListItemButton>
-            <ListItemButton>
-              <ListItemIcon>
-                <ShoppingCartIcon />
-              </ListItemIcon>
-              <ListItemText primary="Orders" />
-            </ListItemButton>
+
             <ListItemButton>
               <ListItemIcon>
                 <PeopleIcon />
               </ListItemIcon>
-              <ListItemText primary="Customers" />
+              <ListItemText primary="Користувачі" />
             </ListItemButton>
+
             <ListItemButton>
               <ListItemIcon>
-                <BarChartIcon />
+                <MarkunreadIcon />
               </ListItemIcon>
-              <ListItemText primary="Reports" />
+              <ListItemText primary="Підписники" />
             </ListItemButton>
+
             <ListItemButton>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary="Про нас" />
+            </ListItemButton>
+
+            {/* <ListItemButton>
               <ListItemIcon>
                 <LayersIcon />
               </ListItemIcon>
               <ListItemText primary="Integrations" />
-            </ListItemButton>
+            </ListItemButton> */}
 
             <Divider sx={{ my: 1 }} />
 
-            <ListSubheader
+            {/* <ListSubheader
               component="div"
               inset
             >
               Saved reports
             </ListSubheader>
+
             <ListItemButton>
               <ListItemIcon>
                 <AssignmentIcon />
               </ListItemIcon>
               <ListItemText primary="Current month" />
             </ListItemButton>
+
             <ListItemButton>
               <ListItemIcon>
                 <AssignmentIcon />
               </ListItemIcon>
               <ListItemText primary="Last quarter" />
             </ListItemButton>
+
             <ListItemButton>
               <ListItemIcon>
                 <AssignmentIcon />
               </ListItemIcon>
               <ListItemText primary="Year-end sale" />
-            </ListItemButton>
+            </ListItemButton> */}
           </List>
         </Drawer>
         <Box
