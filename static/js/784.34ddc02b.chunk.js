@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktheater_admin_panel_up=self.webpackChunktheater_admin_panel_up||[]).push([[784],{5784:(e,a,n)=>{n.r(a),n.d(a,{default:()=>t});n(9060);var s=n(2496);const t=()=>(0,s.jsx)("div",{children:"UsersPage component"})}}]);
+//# sourceMappingURL=784.34ddc02b.chunk.js.map
