@@ -5,11 +5,18 @@ import SharedLayout from "components/SharedLayout";
 
 const PublicationsPage = lazy(() => import("../pages/PublicationsPage"));
 const LoginPage = lazy(() => import("../pages/LoginPage"));
+const UsersPage = lazy(() => import("../pages/UsersPage"));
+const AboutPage = lazy(() => import("../pages/AboutPage"));
+const SubscribersPage = lazy(() => import("../pages/SubscribersPage"));
 
 export const ROUTES = {
   ROOT: "/",
-  PUBLICATIONS: "publications",
   LOGIN: "/login",
+
+  PUBLICATIONS: "publications",
+  USERS: "users",
+  ABOUT: "about",
+  SUBSCRIBERS: "subscribers",
 };
 
 const routes = [
@@ -36,6 +43,18 @@ const routes = [
       {
         path: ROUTES.PUBLICATIONS,
         element: <PublicationsPage />,
+      },
+      {
+        path: ROUTES.USERS,
+        element: <UsersPage />,
+      },
+      {
+        path: ROUTES.ABOUT,
+        element: <AboutPage />,
+      },
+      {
+        path: ROUTES.SUBSCRIBERS,
+        element: <SubscribersPage />,
       },
       {
         path: "*",
